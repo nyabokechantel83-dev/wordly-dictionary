@@ -1,0 +1,227 @@
+/* ===========================
+   GENERAL STYLES
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* ===========================
+   MAIN CONTAINER
+=========================== */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #1f2937;
+    margin-bottom: 10px;
+    font-size: 2.3rem;
+}
+
+header p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===========================
+   SEARCH FORM
+=========================== */
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#word-input {
+    flex: 1;
+    padding: 14px;
+    border: 2px solid #4facfe;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#word-input:focus {
+    border-color: #0077ff;
+}
+
+button {
+    background: #0077ff;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #005fcc;
+    transform: translateY(-2px);
+}
+
+/* ===========================
+   LOADING MESSAGE
+=========================== */
+
+#loading {
+    text-align: center;
+    color: #0077ff;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   ERROR MESSAGE
+=========================== */
+
+#error-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   RESULTS CARD
+=========================== */
+
+#results {
+    margin-top: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    background: #f8fbff;
+    border-left: 6px solid #0077ff;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#word {
+    text-align: center;
+    color: #0077ff;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+.result-item strong {
+    color: #222;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ===========================
+   LINKS
+=========================== */
+
+a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+/* ===========================
+   HIDDEN CLASS
+=========================== */
+
+.hidden {
+    display: none;
+}
+
+/* ===========================
+   ACCESSIBILITY
+=========================== */
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media (max-width: 768px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
