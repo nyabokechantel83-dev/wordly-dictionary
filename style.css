@@ -75,7 +75,7 @@ button:hover {
 }
 
 #error-message {
-    color: palegreen;
+    color: crimson;
     text-align: center;
     margin-bottom: 15px;
 }
