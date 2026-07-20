@@ -127,3 +127,4 @@ function clearResults() {
     source.textContent = "";
     source.removeAttribute("href");
 }
+
