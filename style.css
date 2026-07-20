@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    font-family: Arial, sans-serif;
+    background: #4facfe;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -18,25 +18,23 @@ body {
     width: 100%;
     max-width: 800px;
     background: white;
-    border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 header h1 {
-    color: #1f2937;
+    color: #0077ff;
     margin-bottom: 10px;
-    font-size: 2.3rem;
 }
 
 header p {
     color: #555;
-    line-height: 1.6;
 }
 
 form {
@@ -47,55 +45,46 @@ form {
 
 #word-input {
     flex: 1;
-    padding: 14px;
-    border: 2px solid #4facfe;
-    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #0077ff;
+    border-radius: 5px;
     font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
 }
 
 #word-input:focus {
-    border-color: #0077ff;
+    outline: none;
 }
 
 button {
+    padding: 12px 20px;
     background: #0077ff;
     color: white;
     border: none;
-    padding: 14px 22px;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s, transform 0.3s;
 }
 
 button:hover {
     background: #005fcc;
-    transform: translateY(-2px);
 }
 
 #loading {
     text-align: center;
     color: #0077ff;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #error-message {
     color: red;
     text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #results {
     margin-top: 20px;
-    padding: 25px;
-    border-radius: 10px;
-    background: #f8fbff;
-    border-left: 6px solid #0077ff;
-    animation: fadeIn 0.5s ease-in-out;
+    padding: 20px;
+    background: #f4f8ff;
+    border-radius: 8px;
 }
 
 #word {
@@ -105,12 +94,11 @@ button:hover {
 }
 
 .result-item {
-    margin-bottom: 18px;
-    line-height: 1.7;
+    margin-bottom: 15px;
 }
 
 .result-item strong {
-    color: #222;
+    color: #333;
 }
 
 audio {
@@ -128,10 +116,9 @@ a:hover {
 }
 
 footer {
-    margin-top: 30px;
     text-align: center;
-    color: #777;
-    font-size: 14px;
+    margin-top: 25px;
+    color: #666;
 }
 
 .hidden {
@@ -143,23 +130,7 @@ footer {
     left: -9999px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
     form {
         flex-direction: column;
     }
@@ -168,7 +139,7 @@ footer {
         width: 100%;
     }
 
-    header h1 {
-        font-size: 1.8rem;
+    .container {
+        padding: 20px;
     }
 }
