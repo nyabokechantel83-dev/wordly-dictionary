@@ -1,6 +1,3 @@
-// ==========================
-// SELECT HTML ELEMENTS
-// ==========================
 
 const form = document.getElementById("search-form");
 const input = document.getElementById("word-input");
@@ -18,15 +15,11 @@ const synonyms = document.getElementById("synonyms");
 const audio = document.getElementById("audio");
 const source = document.getElementById("source");
 
-// ==========================
-// EVENT LISTENER
-// ==========================
+
+
 
 form.addEventListener("submit", searchWord);
 
-// ==========================
-// SEARCH FUNCTION
-// ==========================
 
 async function searchWord(event) {
     event.preventDefault();
@@ -68,9 +61,7 @@ async function searchWord(event) {
     }
 }
 
-// ==========================
-// DISPLAY DATA
-// ==========================
+
 
 function displayWord(data) {
 
@@ -142,9 +133,7 @@ function displayWord(data) {
 
 }
 
-// ==========================
-// SHOW ERROR
-// ==========================
+
 
 function showError(message) {
 
@@ -152,9 +141,6 @@ function showError(message) {
 
 }
 
-// ==========================
-// HIDE ERROR
-// ==========================
 
 function hideError() {
 
@@ -162,9 +148,6 @@ function hideError() {
 
 }
 
-// ==========================
-// CLEAR RESULTS
-// ==========================
 
 function clearResults() {
 
