@@ -119,4 +119,8 @@ function clearResults() {
 
     source.textContent = "";
     source.href = "";
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1cff4f6 (changed the background colours and color)
