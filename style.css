@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #4facfe;
+    background: orangered;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ body {
 .container {
     width: 100%;
     max-width: 800px;
-    background: white;
+    background: whitesmoke;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -29,12 +29,12 @@ header {
 }
 
 header h1 {
-    color: #0077ff;
+    color: purple;
     margin-bottom: 10px;
 }
 
 header p {
-    color: #555;
+    color:black;
 }
 
 form {
@@ -46,7 +46,7 @@ form {
 #word-input {
     flex: 1;
     padding: 12px;
-    border: 2px solid #0077ff;
+    border: 2px solid purple;
     border-radius: 5px;
     font-size: 16px;
 }
@@ -57,7 +57,7 @@ form {
 
 button {
     padding: 12px 20px;
-    background: #0077ff;
+    background: purple;
     color: white;
     border: none;
     border-radius: 5px;
@@ -65,17 +65,17 @@ button {
 }
 
 button:hover {
-    background: #005fcc;
+    background: darkmagenta;
 }
 
 #loading {
     text-align: center;
-    color: #0077ff;
+    color: purple;
     margin-bottom: 15px;
 }
 
 #error-message {
-    color: red;
+    color: palegreen;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -83,13 +83,13 @@ button:hover {
 #results {
     margin-top: 20px;
     padding: 20px;
-    background: #f4f8ff;
+    background: whitesmoke;
     border-radius: 8px;
 }
 
 #word {
     text-align: center;
-    color: #0077ff;
+    color: purple;
     margin-bottom: 20px;
 }
 
@@ -98,7 +98,7 @@ button:hover {
 }
 
 .result-item strong {
-    color: #333;
+    color: purple;
 }
 
 audio {
@@ -107,7 +107,7 @@ audio {
 }
 
 a {
-    color: #0077ff;
+    color: purple;
     text-decoration: none;
 }
 
@@ -118,7 +118,7 @@ a:hover {
 footer {
     text-align: center;
     margin-top: 25px;
-    color: #666;
+    color: purple;
 }
 
 .hidden {
