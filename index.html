@@ -1,87 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Word Dictionary</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
-<div class="container">
-
-    <header>
+  <body>
+    <div class="container">
+      <header>
         <h1>Word Dictionary</h1>
-        <p>Search for an English word to view its pronunciation, definition, example, and synonyms.</p>
-    </header>
+        <p>
+          Learn words through simple searches
+        </p>
+      </header>
 
-    <form id="search-form">
-        <label for="word-input" class="visually-hidden">Search for a word</label>
-
-        <input
-            type="text"
-            id="word-input"
-            placeholder="Enter a word..."
-            aria-label="Search for a word"
-            required
+      <form id="search-form">
+        <label for="word-input" class="visually-hidden"
+          >Search for a word</label
         >
 
+        <input
+          type="text"
+          id="word-input"
+          placeholder="Enter a word..."
+          aria-label="Search for a word"
+          required
+        />
+
         <button type="submit">Search</button>
-    </form>
+      </form>
 
-    <div id="loading" class="hidden"></div>
+      <div id="loading" class="hidden"></div>
 
-    <div id="error-message"></div>
+      <div id="error-message"></div>
 
-    <section id="results" class="hidden">
-
+      <section id="results" class="hidden">
         <h2 id="word"></h2>
 
         <div class="result-item">
-            <strong>Pronunciation:</strong>
-            <span id="pronunciation"></span>
+          <strong>Pronunciation:</strong>
+          <span id="pronunciation"></span>
         </div>
 
         <div class="result-item">
-            <strong>Part of Speech:</strong>
-            <span id="part-of-speech"></span>
+          <strong>Part of Speech:</strong>
+          <span id="part-of-speech"></span>
         </div>
 
         <div class="result-item">
-            <strong>Definition:</strong>
-            <span id="definition"></span>
+          <strong>Definition:</strong>
+          <span id="definition"></span>
         </div>
 
         <div class="result-item">
-            <strong>Example:</strong>
-            <span id="example"></span>
+          <strong>Example:</strong>
+          <span id="example"></span>
         </div>
 
         <div class="result-item">
-            <strong>Synonyms:</strong>
-            <span id="synonyms"></span>
+          <strong>Synonyms:</strong>
+          <span id="synonyms"></span>
         </div>
 
         <div class="result-item">
-            <strong>Audio:</strong>
-            <audio id="audio" controls></audio>
+          <strong>Audio:</strong>
+          <audio id="audio" controls></audio>
         </div>
 
         <div class="result-item">
-            <strong>Source:</strong>
-            <a id="source" href="" target="_blank" rel="noopener noreferrer"></a>
+          <strong>Source:</strong>
+          <a id="source" href="" target="_blank" rel="noopener noreferrer"></a>
         </div>
+      </section>
 
-    </section>
+      <footer>
+        <p>Smart Dictionary</p>
+      </footer>
+    </div>
 
-    <footer>
-        <p>Powered by Free Dictionary API</p>
-    </footer>
-
-</div>
-
-<script src="index.js"></script>
-
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
