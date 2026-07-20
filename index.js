@@ -3,6 +3,7 @@ const input = document.getElementById("word-input");
 const loading = document.getElementById("loading");
 const results = document.getElementById("results");
 const errorMessage = document.getElementById("error-message");
+
 const word = document.getElementById("word");
 const pronunciation = document.getElementById("pronunciation");
 const partOfSpeech = document.getElementById("part-of-speech");
@@ -40,9 +41,10 @@ async function searchWord(event) {
 
     } catch (error) {
         showError(error.message);
-    }
 
-    loading.classList.add("hidden");
+    } finally {
+        loading.classList.add("hidden");
+    }
 }
 
 function displayWord(data) {
@@ -50,9 +52,7 @@ function displayWord(data) {
 
     word.textContent = data.word;
 
-    const phonetic = data.phonetics.find(function(item) {
-        return item.text;
-    });
+    const phonetic = data.phonetics.find(item => item.text);
 
     if (phonetic) {
         pronunciation.textContent = phonetic.text;
@@ -60,26 +60,32 @@ function displayWord(data) {
         pronunciation.textContent = "Not available";
     }
 
-    partOfSpeech.textContent = data.meanings[0].partOfSpeech;
-    definition.textContent = data.meanings[0].definitions[0].definition;
+    if (data.meanings.length > 0) {
+        partOfSpeech.textContent = data.meanings[0].partOfSpeech;
+        definition.textContent = data.meanings[0].definitions[0].definition;
 
-    if (data.meanings[0].definitions[0].example) {
-        example.textContent = data.meanings[0].definitions[0].example;
+        if (data.meanings[0].definitions[0].example) {
+            example.textContent = data.meanings[0].definitions[0].example;
+        } else {
+            example.textContent = "No example available.";
+        }
+
+        const synonymList = data.meanings[0].definitions[0].synonyms || data.meanings[0].synonyms || [];
+
+        if (synonymList.length > 0) {
+            synonyms.textContent = synonymList.join(", ");
+        } else {
+            synonyms.textContent = "No synonyms available.";
+        }
+
     } else {
+        partOfSpeech.textContent = "Not available";
+        definition.textContent = "Not available";
         example.textContent = "No example available.";
-    }
-
-    const synonymList = data.meanings[0].definitions[0].synonyms;
-
-    if (synonymList && synonymList.length > 0) {
-        synonyms.textContent = synonymList.join(", ");
-    } else {
         synonyms.textContent = "No synonyms available.";
     }
 
-    const audioData = data.phonetics.find(function(item) {
-        return item.audio;
-    });
+    const audioData = data.phonetics.find(item => item.audio);
 
     if (audioData) {
         audio.src = audioData.audio;
@@ -88,11 +94,12 @@ function displayWord(data) {
         audio.style.display = "none";
     }
 
-    if (data.sourceUrls.length > 0) {
+    if (data.sourceUrls && data.sourceUrls.length > 0) {
         source.href = data.sourceUrls[0];
         source.textContent = "View Source";
     } else {
         source.textContent = "No source available.";
+        source.removeAttribute("href");
     }
 }
 
@@ -118,9 +125,5 @@ function clearResults() {
     audio.style.display = "none";
 
     source.textContent = "";
-    source.href = "";
-<<<<<<< HEAD
+    source.removeAttribute("href");
 }
-=======
-}
->>>>>>> 1cff4f6 (changed the background colours and color)
