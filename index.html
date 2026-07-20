@@ -1,118 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordly Dictionary</title>
-
-    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Main Container -->
-    <div class="container">
+<div class="container">
 
-        <!-- Header -->
-        <header>
-            <h1>📖 Wordly Dictionary</h1>
-            <p>Search for any English word and discover its meaning, pronunciation, examples, and synonyms.</p>
-        </header>
+    <header>
+        <h1>Wordly Dictionary</h1>
+        <p>Search for an English word to view its pronunciation, definition, example, and synonyms.</p>
+    </header>
 
-        <!-- Search Form -->
-        <form id="search-form">
+    <form id="search-form">
+        <label for="word-input" class="visually-hidden">Search for a word</label>
 
-            <label for="word-input" class="visually-hidden">
-                Search for a word
-            </label>
+        <input
+            type="text"
+            id="word-input"
+            placeholder="Enter a word..."
+            aria-label="Search for a word"
+            required
+        >
 
-            <input
-                type="text"
-                id="word-input"
-                placeholder="Enter a word..."
-                aria-label="Search for a word"
-                required
-            >
+        <button type="submit">Search</button>
+    </form>
 
-            <button type="submit">
-                Search
-            </button>
+    <div id="loading" class="hidden"></div>
 
-        </form>
+    <div id="error-message"></div>
 
-        <!-- Loading Message -->
-        <div id="loading" class="hidden">
-            Searching...
+    <section id="results" class="hidden">
+
+        <h2 id="word"></h2>
+
+        <div class="result-item">
+            <strong>Pronunciation:</strong>
+            <span id="pronunciation"></span>
         </div>
 
-        <!-- Error Message -->
-        <div id="error-message"></div>
+        <div class="result-item">
+            <strong>Part of Speech:</strong>
+            <span id="part-of-speech"></span>
+        </div>
 
-        <!-- Results Card -->
-        <section id="results" class="hidden">
+        <div class="result-item">
+            <strong>Definition:</strong>
+            <span id="definition"></span>
+        </div>
 
-            <h2 id="word"></h2>
+        <div class="result-item">
+            <strong>Example:</strong>
+            <span id="example"></span>
+        </div>
 
-            <div class="result-item">
-                <strong>Pronunciation:</strong>
-                <span id="pronunciation"></span>
-            </div>
+        <div class="result-item">
+            <strong>Synonyms:</strong>
+            <span id="synonyms"></span>
+        </div>
 
-            <div class="result-item">
-                <strong>Part of Speech:</strong>
-                <span id="part-of-speech"></span>
-            </div>
+        <div class="result-item">
+            <strong>Audio:</strong>
+            <audio id="audio" controls></audio>
+        </div>
 
-            <div class="result-item">
-                <strong>Definition:</strong>
-                <span id="definition"></span>
-            </div>
+        <div class="result-item">
+            <strong>Source:</strong>
+            <a id="source" href="" target="_blank" rel="noopener noreferrer"></a>
+        </div>
 
-            <div class="result-item">
-                <strong>Example:</strong>
-                <span id="example"></span>
-            </div>
+    </section>
 
-            <div class="result-item">
-                <strong>Synonyms:</strong>
-                <span id="synonyms"></span>
-            </div>
+    <footer>
+        <p>Powered by Free Dictionary API</p>
+    </footer>
 
-            <div class="result-item">
-                <strong>Pronunciation Audio:</strong>
-                <audio id="audio" controls></audio>
-            </div>
+</div>
 
-            <div class="result-item">
-                <strong>Source:</strong>
-                <a
-                    id="source"
-                    href=""
-                    target="_blank"
-                    rel="noopener noreferrer">
-                </a>
-            </div>
-
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <p>Powered by Free Dictionary API</p>
-        </footer>
-
-    </div>
-
-    <!-- JavaScript -->
-    <script src="index.js"></script>
+<script src="index.js"></script>
 
 </body>
-
 </html>
